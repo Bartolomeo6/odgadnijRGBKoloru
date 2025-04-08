@@ -1,0 +1,41 @@
+﻿<Window x:Class="cieploZimnoKolory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cieploZimnoKolory"
+        mc:Ignorable="d"
+        Title="Ciepło, zimno - kolory 08.04.2025" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="wylosujKolor" Click="wylosujKolor_Click" Content="Wylosuj kolor" Height="50" Width="100"></Button>
+        <Rectangle x:Name="wylosowanyKolorProstokat" Grid.Column="1"></Rectangle>
+        <TextBlock Text="R:" Grid.Row="1" FontSize="50"></TextBlock>
+        <TextBox Grid.Row="1" x:Name="skladCzerw" Width="100" Height="50"></TextBox>
+        
+        <TextBlock Text="G:" Grid.Row="2" FontSize="50"></TextBlock>
+        <TextBox Grid.Row="2" x:Name="skladZiel" Width="100" Height="50"></TextBox>
+        
+        <TextBlock Text="B:" Grid.Row="3" FontSize="50"></TextBlock>
+        <TextBox Grid.Row="3" x:Name="skladNieb" Width="100" Height="50"></TextBox>
+
+        <Button x:Name="sprawdzJakBlisko" Click="sprawdzJakBlisko_Click" Content="Sprawdź" Grid.Row="4" Width="80" Height="50"></Button>
+
+        <TextBlock FontSize="20" x:Name="jakBliskoCzerw" Grid.Row="1" Grid.ColumnSpan="2" Width="100"></TextBlock>
+        <TextBlock FontSize="20" x:Name="jakBliskoZiel" Grid.Row="2" Grid.ColumnSpan="2" Width="100"></TextBlock>
+        <TextBlock FontSize="20" x:Name="jakBliskoNieb" Grid.Row="3" Grid.ColumnSpan="2" Width="100"></TextBlock>
+
+        <Rectangle x:Name="czyPoprawnyKolorProstokat" Grid.RowSpan="3" Grid.Column="1" Grid.Row="1" Width="200"></Rectangle>
+    </Grid>
+</Window>
